@@ -43,11 +43,11 @@ Let's go line by line, since this is for total beginners.
                 section .text
 		global _start
         _start:
-		mov     ecx, msg
-		mov     edx, msgLen
+                mov     ecx, msg
+                mov     edx, msgLen
 
                 call print
-		call exit
+                call exit
 
    Similar to '.data', '.text' is where our instructions (and the bulk of the program) go. Defining the global '_start' is similar, and is like a main() function in other languages. It's the required entry point for the program.
 
@@ -81,7 +81,7 @@ Let's go line by line, since this is for total beginners.
 4. Text Section (The last chunk -- exit):
 
         exit:
-		mov     eax, 1
+		mov	eax, 1
 		mov	ebx, 0
 		int     0x80
 
